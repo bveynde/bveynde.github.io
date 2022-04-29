@@ -1,4 +1,4 @@
 # bveynde.github.io
 hugo gh-pages
 
-[Bart sub page](bart)
+[bveynde.github.io](https://bveynde.github.io/)
