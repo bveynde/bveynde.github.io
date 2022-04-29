@@ -43,7 +43,7 @@ menu:
       weight: 1
     - name: Archives
       url: /archives
-      weight: 2
+      weight: 1
     - name: Source code
       url: 'https://github.com/leonardofaria/bento'
       weight: 1
