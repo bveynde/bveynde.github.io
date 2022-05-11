@@ -1,0 +1,49 @@
+theme: bento
+languageCode: en-us
+baseurl: 'https://bveynde.github.io'
+title: BVEynde
+author: Bart Van Eynde
+copyright: MIT
+taxonomies:
+  category: categories
+  tag: tags
+markup:
+  highlight:
+    style: github
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  intro: true
+  headline: bveynde
+  description: 'A collection of code snipits and howtos.'
+  copyright: Copyright © 2022 bveynde
+  cover: images/vancouver.jpg
+  ogImage: images/og_image.jpg
+  github: bveynde
+  #twitter: XXXX
+  linkedin: 'https://linkedin.com/in/XXXX'
+  #email: email@xxxx.com
+  avatar: images/avatar.jpg
+  authorBio: Bento is a doggo who likes to code. Follow him on <a href='#'>Twitter</a>
+  #fathomAnalytics:
+  #  siteID: XXXXX
+  #  serverURL: analytics.example.com
+  #umami:
+  #  siteID: XXXXX
+  #  trackerScript: //umami.example.com/umami.js
+  pygmentsCodefences: true
+  pygmentsStyle: vs
+  #googleAnalytics: UA-XXXXXX-YY
+  #disqusShortname: bento-hugo-theme
+menu:
+  main:
+    - name: About
+      url: /about
+      weight: 1
+    - name: Archives
+      url: /archives
+      weight: 1
+    - name: Source code
+      url: 'https://github.com/leonardofaria/bento'
+      weight: 1
