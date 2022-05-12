@@ -4,4 +4,5 @@
 
 
 ## todo
-* investigate [https://github.com/jekyll/minima](jekyll/minima) - blog style = ok , tags/categories = tbd?   
+* finetune theme
+* add content ...  
