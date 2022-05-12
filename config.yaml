@@ -22,10 +22,11 @@ params:
   ogImage: images/og_image.jpg
   github: bveynde
   #twitter: XXXX
-  linkedin: 'https://linkedin.com/in/XXXX'
+  linkedin: 'https://linkedin.com/in/bartvaneynde'
   #email: email@xxxx.com
   avatar: images/avatar.jpg
-  authorBio: Bento is a doggo who likes to code. Follow him on <a href='#'>Twitter</a>
+  #authorBio: Bento is a doggo who likes to code. Follow him on <a href='#'>Twitter</a>
+  authorBio: ''
   #fathomAnalytics:
   #  siteID: XXXXX
   #  serverURL: analytics.example.com
@@ -44,6 +45,6 @@ menu:
     - name: Archives
       url: /archives
       weight: 1
-    - name: Source code
-      url: 'https://github.com/leonardofaria/bento'
+    - name: Src
+      url: 'https://github.com/bveynde/bveynde.github.io/'
       weight: 1
