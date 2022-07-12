@@ -1,6 +1,6 @@
 baseurl: 'https://bveynde.github.io'
 languageCode: en-us
-theme: ramium
+theme: bento
 title: BVEynde
 disqusShortname: ''
 googleAnalytics: ''
