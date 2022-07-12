@@ -17,10 +17,6 @@
 <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | relURL }}">
 <link rel="stylesheet" href="{{ "/css/bulma.min.css" | relURL }}">
 
-{{ if not (in (string .Site.BaseURL) "localhost") }}
-{{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
-
 <script src={{ "/js/ramium.js" | relURL }}></script>
 <link rel="stylesheet" href={{ "/css/ramium.css" | relURL }}>
 
@@ -32,6 +28,3 @@
 {{ partial "math.html" . }}
 {{ end }}
 
-{{ if .Site.Params.adsense }}
-<script data-ad-client="{{ .Site.Params.adsense }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-{{ end }}
