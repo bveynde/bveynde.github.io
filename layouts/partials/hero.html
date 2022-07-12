@@ -1,0 +1,21 @@
+    <!-- hero - https://github.com/Tazeg/hugo-blog-jeffprod/blob/master/layouts/partials/header.html#L27 -->
+    <section class="hero is-info is-medium">
+        <div class="hero-body" style="background-image: url({{ "image/bg-blog.jpg" | absURL }});">
+            <div class="container has-text-centered">
+                <br>
+                <h1 class="title is-size-1">
+                    {{ if eq .Type "tags" }}
+                        #{{ .Title }}
+                    {{ else if eq .Type "archives" }}
+                        Archive {{ .Title }}
+                    {{ else }}
+                        {{ .Title }}
+                    {{ end }}
+                </h1>
+                {{ if eq .Type "article" }}
+                    {{ .Date.Format "January 2, 2006" }} &middot;&nbsp;{{ .ReadingTime }} min read
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    <!-- hero -->
