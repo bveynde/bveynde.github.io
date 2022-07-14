@@ -21,11 +21,6 @@ slug: keeping-portainer-uptodate-docker-compose
 ## Situation
 Portainer provides nice update commands when there is a new version, but I was looking for a docker-compose way...
 
-## Requirements
- * If nothing is selected, "9999 - tbd", must be the first choise
- * make sure the current name is in the list, even if it is inactive today
- * sort names alphabeticly 
-
 ## Short
 ```bash
 docker-compose pull
