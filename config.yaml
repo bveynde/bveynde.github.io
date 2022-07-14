@@ -10,7 +10,7 @@ enableemoji: false
 ignoreErrors:
   - error-missing-instagram-accesstoken
 params:
-  description: My collection of short Tips & howtos
+  description: My collection of short Tips & How To's
   googleSearch: ''
   adsense: ''
   showDate: true
