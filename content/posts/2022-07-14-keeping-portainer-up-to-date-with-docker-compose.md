@@ -81,5 +81,5 @@ networks:
 
 ## Ref
  * [stackoverflow - Evgen Bodunov answer](https://stackoverflow.com/questions/49316462/how-to-update-existing-images-with-docker-compose)
-
+ * [composerize.com](https://www.composerize.com/) - online convert run command to docker-compose.yml
  
