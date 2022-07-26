@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<div class="content">
+    <!-- h1 class="title">Archive</h1 -->
+
+    <p class="summary">
+        {{- range site.RegularPages.GroupByDate "2006" }}
+        <h3>{{ .Key }}</h3>
+
+		<!-- pre>{{/* - jsonify (dict "prefix" " " "indent" "  ") . - */}}</pre -->
+  
+        <ul>
+          {{/* range where .Pages "Type" "ne" "page" - */}}
+		  {{ range where .Pages "Type" "in" site.Params.mainSections -}}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              {{ .Title }}
+            </a>
+            -
+            <small>
+              <time datetime="{{ dateFormat "2006-01-02T15:04:05-07:00" (default .Date (.PublishDate)) }}">
+                {{ dateFormat "Jan 2" (default .Date (.PublishDate)) }}
+              </time>
+              - 
+              {{ range (.GetTerms "tags") }}
+                <a href="{{ .Permalink }}">
+                  {{ .LinkTitle }}
+                </a>
+              {{ end }}
+            </small>
+          </li>
+          {{- end }}
+        </ul>
+        {{ end }}
+    </p>
+
+	
+	
+</div>
+
+{{ end }}

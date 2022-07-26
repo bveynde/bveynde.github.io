@@ -1,35 +1,29 @@
 {{ if ne .Site.Params.TagsInHome 0 }}
 
-{{ $randTags := (slice)}}
-{{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-{{ $randTags = $randTags | append $name }}
-{{ end }}
-{{ $randTags = sort (first .Site.Params.TagsInHome (shuffle $randTags)) }}
+    {{ if gt (len .Site.Taxonomies.tags) 1 }}
 
-{{ if gt (len $randTags) 1 }}
+    <!-- only show tags that are used more than ones -->
 
-<!-- todo - only show tags that are used more than ones -->
-
-<div class="columns is-centered has-text-centered">
-    <div class="column is-10">
-        <div class="content">
-            <!-- a href="{{ "/tags/" | relURL }}">
-                <h1>Read articles by tags</h1>
-            </a -->
-            <p class="tags-summary">
-                {{ range $name := $randTags }}
-                <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}">
-                    <span class="tag is-dark is-large is-rounded">
-                        {{ replace $name "-" " " | title }}
-                    </span>
-                </a>
-                {{ end }}
-				<a href="{{ "/tags/" | relURL }}"><span class="tag is-light is-large is-rounded">#ALL</span></a>
-            </p>
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-10">
+            <div class="content">
+                <p class="tags-summary">
+                    {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+                        {{ if gt $taxonomy.Count 1 }}
+                            <a href="/tags/{{ $name | urlize }}">
+                                <span class="tag is-dark is-large is-rounded" title="Show posts having the #{{ $name | humanize }} tag ({{ $taxonomy.Count }})">
+                                    {{ $name | humanize }}
+                                </span>
+                            </a>
+                        {{ end }}
+                    {{ end }}
+                    <a href="{{ "/tags/" | relURL }}"><span class="tag is-light is-large is-rounded" title="Show all Tags...">#ALL</span></a>
+                </p>
+            </div>
         </div>
     </div>
-</div>
-<br>
+    <br>
 
-{{ end }}
+    {{ end }}
+
 {{ end }}

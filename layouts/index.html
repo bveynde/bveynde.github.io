@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+    <!-- hero - https://github.com/Tazeg/hugo-blog-jeffprod/blob/master/layouts/partials/header.html#L27 -->
+    <section class="hero is-info is-small">
+        <div class="hero-body" style="background-image: url({{ "image/vancouver.jpg" | absURL }});">
+            <div class="container has-text-centered">
+				<br><br><br>
+				<h1 class="title is-1">
+					{{ .Title }}
+				</h1>
+				<h1 class="subtitle is-4">
+					{{ .Params.Subtitle }}
+				</h1>
+				<h1 class="subtitle is-5">
+					{{ with .Content }}
+					{{ . }}
+					{{ end }}
+				</h1>
+                {{ if eq .Type "article" }}
+                    {{ .Date.Format "January 2, 2006" }} &middot;&nbsp;{{ .ReadingTime }} min read
+                {{ end }}
+            </div>
+        </div>
+    </section>
+    <!-- hero -->
+	
+{{- partial "index/tag-bullet.html" . -}}
+{{- partial "index/section-bullet.html" . -}}
+{{- partial "index/list-blog-brief.html" . -}}
+
+{{ end }}

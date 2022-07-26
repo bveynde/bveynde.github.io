@@ -241,3 +241,10 @@ kbd {
     border-color: #363636;
     color: #fff;
 }
+
+
+/******* no padding left right - fix pagination spacing *******/
+.section.no-padding-left-right {	
+	padding-right: 0rem;
+    padding-left: 0rem;	
+}
