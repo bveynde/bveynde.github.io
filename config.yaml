@@ -17,7 +17,7 @@ params:
   math: false
   githubProfile: bveynde
   tagsInHome: 40
-  sectionsInHome: 5
+  sectionsInHome: 0
   paginatePostsPerPage: 5
   paginateTagsPerPage: 6
 taxonomies:
