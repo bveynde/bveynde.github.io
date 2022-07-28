@@ -65,7 +65,7 @@ networks:
 ## Upgrading
 ### docker-compose pull
  * Download the latest image
- * Please note the "image: portainer/portainer-ce:latest" line, do not expect an new version if you staticly defined a fixed version here
+ * Please note the "image: portainer/portainer-ce:latest" line, do not expect a new version if you staticly defined a fixed version here
  * Docker has downloaded the most recent version, your container is still running with that previous version... 
 ### docker-compose up --detach
  * In docker-compose terms is this a reboot of your container...
