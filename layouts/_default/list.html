@@ -1,0 +1,9 @@
+{{ define "main" }}
+
+{{ range .Paginator.Pages }}
+{{- partial "blog-brief.html" . -}}
+{{ end }}
+
+{{ partial "pagination.html"}}
+
+{{ end }}
